@@ -9,8 +9,10 @@ class SearchBar extends React.Component {
         });
     };
 
-    onFormSubmit = (event) => {
+    onFormSubmit = event => {
         event.preventDefault(); //prevent from refeshing the page
+
+        this.props.onFormSubmit(this.state.term)
     };
     render(){
         return (
