@@ -1,9 +1,16 @@
+/* eslint-disable jsx-a11y/alt-text */
+import '../Components/VideoItem.css';
 import React from 'react';
 
-const VideoItem = ({video}) => {
-        return (<div>
-            <img src={video.snippet.thumbnails.medium.url}/>
-            {video.snippet.title}
+const VideoItem = ({video, onVideoSelect}) => {
+        return (
+        <div onClick={(() => onVideoSelect(video))} className="video-item item">
+            <img className="ui image" src={video.snippet.thumbnails.medium.url}/>
+           <div className="content">
+           <div className="header">
+           {video.snippet.title}</div>
+           </div>
+
         </div>
         );
 };
