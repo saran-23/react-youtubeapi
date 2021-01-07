@@ -26,10 +26,10 @@ import VideoDetail from './VideoDetail';
               {/* Number of videos is {this.state.videos.length} */}
                 <div className="ui grid">
                     <div className="ui row">
-                        <div className="ten wide column">
+                        <div className="eleven wide column">
                             <VideoDetail video={this.state.selectedVideo} />
                         </div>
-                        <div className="four wide column">
+                        <div className="five wide column">
                             <VideoList onVideoSelect={this.onVideoSelect}  
                              videos={this.state.videos}
                               />
